@@ -1,9 +1,9 @@
 # solo-koala-128 - tier1
 See-your-Chingu-homepage-for-what-project-to-build -> https://chingu.io/ | Solo Koala | Twitter: https://twitter.com/ChinguCollabs
 
-#Chingu Solo Project - Tier 1 - Favorite Fonts
+## Chingu Solo Project - Tier 1 - Favorite Fonts
 
-###Overview
+### Overview
 ------------------------------------------------------------------------------------
 
 This project is a great opportunity to develop a clean and modern webpage. The Favorite Fonts app will be completed across tiers, with each tier adding a new level of complexity. You are currently on the Tier 1 repo. You'll be responsible for coding the HTML, CSS, and JavaScript to get the structure, styling, and some basic functionality up and running.
@@ -19,7 +19,7 @@ As a Tier 1 project there is no need to use the Google Fonts API to retrieve fon
 
 General instructions for all Pre-Work Projects can also be found in the Chingu Voyage Handbook (URL posted in the #read-me-first channel on Discord).
 
-####Requirements
+#### Requirements
 
 *Structure*
 
