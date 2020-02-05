@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-rows: 64px 64px 1fr 3rem;
+    padding: 0 60px;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+    margin: 0 auto;
+
+}
+html {
+    height: 100%;
+}
+
+h2, h3 {
+    font-size: 16px;
+}
+h3 {
+    color: rgba(0, 0, 0, 0.65);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-row: 1 / 2;
+    padding: 1rem 0;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+header ul li {
+    list-style: none;
+    padding-left: .5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+nav {
+    display: flex;
+    grid-row: 2 / 3;
+    justify-content: space-between;
+}
+
+main {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-rows: minmax(237px, 250px);
+    grid-gap: 2.5rem;
+    
+}
+.card {
+    
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.75);
+}
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .6rem;
+}
+.fa-plus-circle {
+    color: #ff5252;
+}
+.btn-round {
+    border-radius: 50%;
+    outline: none; 
+    border: none; 
+    cursor: pointer;
+    font-size: 1.15rem;
+}
+.text {
+    padding-top: 1.5rem;
+    font-size: 24px;
+}
+
+.roboto p {
+    font-family: 'Roboto', sans-serif;
+}
+.open-sans p {
+    font-family: 'Open Sans', sans-serif;
+}
+.lato p {
+    font-family: 'Lato', sans-serif;
+}
+.montserrat p {
+    font-family: 'Montserrat', sans-serif;
+}
+.source-sans-pro p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.roboto-condensed p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.oswald p {
+    font-family: 'Oswald', sans-serif;
+}
+.raleway p {
+    font-family: 'Raleway', sans-serif;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 5%;
+    margin-bottom: 0;
+    grid-row: 4 / 5;
+    
+}
+
+footer p {
+    font-size: 1rem;
+}
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0 1.25rem;
+        max-width: 480px;
+    }
+    header {
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .card {
+        max-width: 480px;
+    }
+    
+}
+@media (min-width: 640px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    
+}
+@media (min-width: 1260px) {
+    main {
+        grid-template-columns: repeat( 3, 1fr);
+    }
+    
+}
+@media (min-width: 1600px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

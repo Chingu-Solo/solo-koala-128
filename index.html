@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Favorite Fonts</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto|Roboto+Condensed|Source+Sans+Pro&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/658ee16d86.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,9 +24,10 @@
     <nav class="toolbar-wrapper">
         <div class="toolbar-search">
             <i class="fas fa-search"></i>
-            Search
+            <input type="text" name="searchfonts" placeholder="Search fonts">
+            
         </div>
-        <div class="toolbar-text">
+        <!-- <div class="toolbar-text">
             Type something 
         </div>
         <div class="toolbar-fontsize">
@@ -35,10 +38,10 @@
         </div>
         <div class="toolbar-view">
             list/chart
-        </div>
-        <div class="toolbar-refresh">
-            refresh
-        </div>
+        </div> -->
+        <button class="toolbar-refresh">
+            <i class="fas fa-redo-alt"></i>
+        </button>
     </nav>
 
     <main>
@@ -46,80 +49,99 @@
         <article class="card roboto">
             <div class="first-row">
                 <h2 class="name">Roboto</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+                
             </div>
             <h3 class="author">Christian Robertson</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <div class="text">
+                <p>All their equipment and instruments are alive.</p>
+            </div>
+            
         </article>
 
         <article class="card open-sans">
             <div class="first-row">
                 <h2 class="name">Open Sans</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Steve Matteson</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">I watched the storm, so beautiful yet terrific.</p>
         </article>
 
         <article class="card lato">
             <div class="first-row">
                 <h2 class="name">Lato</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Łukasz Dziedzic</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">Almost before we knew it, we had left the ground.</p>
         </article>
 
         <article class="card montserrat">
             <div class="first-row">
                 <h2 class="name">Montserrat</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Juieta Ulanovsky, sol Matas, Juan pablo dle Peral, Jacques Le Bailly</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">It was going to be a lonely trip back.</p>
         </article>
 
         <article class="card source-sans-pro">
             <div class="first-row">
                 <h2 class="name">Source Sans Pro</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Paul D.Hunt</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">My two natures had memory in common.</p>
         </article>
 
         <article class="card roboto-condensed">
             <div class="first-row">
                 <h2 class="name">Roboto Condensed</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Christian Robertson</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">Silver mist suffused the deck of the ship.</p>
         </article>
 
         <article class="card oswald">
             <div class="first-row">
-                <h2 class="name">Oswal</h2>
-                <i class="fas fa-plus-circle"></i>
+                <h2 class="name">Oswald</h2>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Vernon Adams, Kalapi Gajjar, Cyreal</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">The face of the moon was in shadow.</p>
         </article>
 
         <article class="card raleway">
             <div class="first-row">
                 <h2 class="name">Raleway</h2>
-                <i class="fas fa-plus-circle"></i>
+                <button class="btn-round">
+                    <i class="fas fa-plus-circle"></i>
+                </button>
             </div>
             <h3 class="author">Multiple Designers</h3>
-            <p class="text">Mist envelped the ship three hours out from port.</p>
+            <p class="text">She stared through the window at the stars.</p>
         </article>
 
         
     </main>
     <footer>
-        <p>Made by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a></p>
-        <p>Chingu Solo Project</p>
+        <p>Created by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a>  |  Chingu Solo Project</p>
     </footer>
     
 </body>
