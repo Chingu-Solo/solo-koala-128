@@ -6,39 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Favorite Fonts</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/658ee16d86.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a href="#" class="logo">Google Fonts</a>
-        <nav>
-            <a href="#">Catalog</a>
-            <a href="#">Featured</a>
-            <a href="#">Articles</a>
-            <a href="#">About</a>   
-        </nav>         
+        <ul class="navigation">
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">About</a></li>
+        </ul>         
     </header>
-    <main>
-        <div class="toolbar-wrapper">
-            <div class="toolbar-search">
-                <i class="fas fa-search"></i>
-                Search
-            </div>
-            <div class="toolbar-text">
-                Type something 
-            </div>
-            <div class="toolbar-fontsize">
-                24px
-            </div>
-            <div class="toolbar-changebc">
-                black/white
-            </div>
-            <div class="toolbar-view">
-                list/chart
-            </div>
-            <div class="toolbar-refresh">
-                refresh
-            </div>
+    
+    <nav class="toolbar-wrapper">
+        <div class="toolbar-search">
+            <i class="fas fa-search"></i>
+            Search
         </div>
+        <div class="toolbar-text">
+            Type something 
+        </div>
+        <div class="toolbar-fontsize">
+            24px
+        </div>
+        <div class="toolbar-changebc">
+            black/white
+        </div>
+        <div class="toolbar-view">
+            list/chart
+        </div>
+        <div class="toolbar-refresh">
+            refresh
+        </div>
+    </nav>
+
+    <main>
+       
         <article class="card roboto">
             <div class="first-row">
                 <h2 class="name">Roboto</h2>
@@ -114,7 +118,7 @@
         
     </main>
     <footer>
-        <p>Made by Magdalena Rosłaniec</p>
+        <p>Made by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a></p>
         <p>Chingu Solo Project</p>
     </footer>
     
