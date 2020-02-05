@@ -23,15 +23,15 @@ General instructions for all Pre-Work Projects can also be found in the Chingu V
 
 *Structure*
 
-- [ ] Header with minor navigation (Logo and Catalog/Featured/Articles/About link list)
-- [ ] Nav with Major navigation / page-manipulation (search, custom text, font-size, dark/light mode, grid/list mode, and reset)
-- [ ] Main section to contain the font cards
-- [ ] Font cards which display the Font Name, the font creator, the sample text, and an add button
-- [ ] Footer section with your developer information
+- [+] Header with minor navigation (Logo and Catalog/Featured/Articles/About link list)
+- [] Nav with Major navigation / page-manipulation (search, custom text, font-size, dark/light mode, grid/list mode, and reset)
+- [+] Main section to contain the font cards
+- [+] Font cards which display the Font Name, the font creator, the sample text, and an add button
+- [+] Footer section with your developer information
 
 *Style*
 
-- [ ] Sample text in each card should be displayed in the corresponding font
+- [+] Sample text in each card should be displayed in the corresponding font
 - [ ] Buttons/links should be evident (make sure the cursor changes, etc.)
 - [ ] Implement a way to handle overflow from sample text in font cards, as the font size is adjustable
 
