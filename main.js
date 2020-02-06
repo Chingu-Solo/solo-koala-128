@@ -1,17 +1,15 @@
-const white = document.querySelector(".btn-white");
-console.log(white)
+// the light/dark mode toggle buttons
 
-white.addEventListener("click", function () {
-    document.body.style.background = "white";
-    document.body.style.color = "black";
+const toggleSwitch = document.querySelector('.toolbar-switch input[type="checkbox"]')
 
-})
-const black = document.querySelector('.btn-black');
-console.log(black)
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'white');
+    }
+}
 
-black.addEventListener("click", function () {
-    document.body.style.background = "black";
-    document.body.style.color = "white";
-
-})
+toggleSwitch.addEventListener('change', switchTheme, false);
 

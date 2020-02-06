@@ -10,18 +10,43 @@ body {
     font-family: 'Open Sans', sans-serif;
     min-height: 100%;
     margin: 0 auto;
+    color: var(--font-color);
+    background-color: var(--bg-color);
 
 }
 html {
     height: 100%;
 }
 
+:root {
+    --font-color: rgb(0, 0, 0);
+    --secondary-font-color: rgba(0, 0, 0, 0.6);
+    --border-color: rgba(0, 0, 0, .75);
+    --bg-color: #FFFAFA;
+    --link-color: rgb(0, 0, 0);
+    --input-bgcolor: #FFFAFA;
+    --input-color: rgb(0, 0, 0);
+}
+
+[data-theme="dark"] {
+    --font-color: #FFFAFA;
+    --secondary-font-color: lightgrey;
+    --border-color: #FFFAFA;
+    --bg-color: #303030;
+    --link-color: #FFFAFA;
+    --input-bgcolor: rgb(0, 0, 0);
+    --input-color: #FFFAFA;
+}
+
 h2, h3 {
     font-size: 16px;
 }
 h3 {
-    color: rgba(0, 0, 0, 0.65);
+    color: var(--secondary-font-color);
 }
+
+/*------------------ HEADER ---------------------*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -39,31 +64,105 @@ header ul li {
 
 header a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--link-color);
 }
 
+/*------------------ NAVBAR ---------------------*/
 
 nav {
     display: flex;
     grid-row: 2 / 3;
     justify-content: space-between;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    border-radius: 34px;
+    padding: 1rem .5rem;
+    width: 100%;
+}
+nav .fa-search {
+    padding: 0 .5rem;
 }
 
-.btn-white, .btn-black {
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: 50%;    
-    outline: none; 
+input[type="text"] {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    line-height: 1.5em;
+    color: var(--input-color);
+
+}
+.toolbar-text input {
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+}
+.toolbar-search, .toolbar-text {
+    border-right: 1px solid var(--border-color);
+}
+/*------------------ COLOR SWITCHER ---------------------*/
+.toolbar-wrapper {
+    padding: .75rem;
+    height: 40px;
+    
+}
+
+.toolbar-switch-wrapper {
+    display: flex;
+    
+}
+
+.toolbar-switch {
+    display: inline-block;
+    height: 46px;
+    position:relative;
+    width: 60px;
+}
+
+.toolbar-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: rgb(0, 0, 0);
+    bottom: 1.5rem;
     cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -7px;
+    transition: .4s;
 }
-.btn-white {
-    background-color: white;
-    border: 1px solid #ff5252;
+.slider:before {
+    background-color: #FFFAFA;
+    bottom: 3px;
+    content: "";
+    height: 24px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 24px;
 }
-.btn-black {
-    background-color: black;
-    border: none;
+
+input:checked + .slider {
+    background-color: lightgrey
 }
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.sl-round {
+    border-radius: 24px;
+}
+
+.slider.sl-round  {
+    border-radius: 24px;
+}
+
+.slider.sl-round:before {
+    border-radius: 50%;
+}
+
+/*------------------ MAIN CONTENT ---------------------*/
 
 main {
     grid-row: 3 / 4;
@@ -76,7 +175,7 @@ main {
     
     padding-top: 1rem;
     padding-bottom: 5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.75);
+    border-top: 1px solid var(--border-color);
 }
 .first-row {
     display: flex;
@@ -87,12 +186,18 @@ main {
     color: #ff5252;
 }
 .btn-round {
-    border-radius: 50%;
-    outline: none; 
-    border: none; 
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    outline: none;
+    border: none;
     cursor: pointer;
     font-size: 1.15rem;
 }
+.btn-round:focus {
+    border: none;
+}
+
 .text {
     padding-top: 1.5rem;
     font-size: 24px;
@@ -122,6 +227,8 @@ main {
 .raleway p {
     font-family: 'Raleway', sans-serif;
 }
+
+/*------------------ FOOTER ---------------------*/
 footer {
     display: flex;
     justify-content: center;
@@ -135,17 +242,26 @@ footer {
 footer p {
     font-size: 1rem;
 }
-@media screen and (max-width: 480px) {
+
+footer a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+/*------------------ MEDIA  ---------------------*/
+
+@media screen and (max-width: 649px) {
     body {
         padding: 0 1.25rem;
-        max-width: 480px;
+       
     }
     header {
         flex-direction: column;
         font-size: 14px;
     }
-    .card {
-        max-width: 480px;
+    
+    .toolbar-text, .toolbar-fontsize, .toolbar-switch-wrapper, .toolbar-view {
+        display: none;
     }
     
 }
@@ -165,5 +281,12 @@ footer p {
 @media (min-width: 1600px) {
     main {
         grid-template-columns: repeat(4, 1fr);
+    }
+    nav, main {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .card {
+        max-width: 360px;
     }
 }
