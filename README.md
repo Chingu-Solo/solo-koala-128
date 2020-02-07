@@ -1,7 +1,13 @@
 # solo-koala-128 - tier1
 See-your-Chingu-homepage-for-what-project-to-build -> https://chingu.io/ | Solo Koala | Twitter: https://twitter.com/ChinguCollabs
 
+# Project under construction
+
 ## Chingu Solo Project - Tier 1 - Favorite Fonts
+
+## Author
+
+[@maknetaRo - Magdalena Rosłaniec ](https://github.com/maknetaRo)
 
 ### Overview
 ------------------------------------------------------------------------------------
@@ -50,6 +56,6 @@ General instructions for all Pre-Work Projects can also be found in the Chingu V
 *Extras (Not Required)*
 
 - [x] Include a back-to-top button that allows users to scroll to the top once the top of the page is out of view
-- [ ] Make your design fully responsive (small/large/portrait/landscape, etc.)
+- [x] Make your design fully responsive (small/large/portrait/landscape, etc.)
 - [x] Implement the light/dark mode toggle buttons
 - [ ] Implement the change display icon so you can flip between a grid and list layout for the font cards
