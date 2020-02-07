@@ -16,7 +16,7 @@ function topButton() {
     document.documentElement.scrollTop = 0;
 }
 
-// search fonts
+// search fonts && type something
 const names = document.querySelectorAll('article')
 
 const searchBar = document.forms['search-fonts'].querySelector('input');
@@ -32,6 +32,32 @@ searchBar.addEventListener('keyup', function(e) {
         }
     })
 })
+
+const typeBar = document.forms['type-sth'].querySelector('input');
+console.log(typeBar)
+typeBar.addEventListener('keyup', function(e) {
+    const word = e.target.value;
+    console.log(word)
+    Array.from(names).forEach(function(name){
+        let paragraph = name.querySelector('p')
+        console.log(`This is: ${paragraph}.`)        
+        paragraph.textContent = word;
+    })
+})
+
+// refresh page using button
+
+// const refreshBar = document.getElementById('refresh');
+// console.log(refresh)
+
+// function refreshPage(event, typeBar, searchBar) {
+
+
+// }
+// refreshBar.addEventListener('click',  {
+
+// })
+
 
 // the light/dark mode toggle buttons
 
