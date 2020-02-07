@@ -12,150 +12,167 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Google Fonts</a>
+        <a href="#" class="logo">Google <span>Fonts</span></a>
         <ul class="navigation">
-            <li><a href="#">Catalog</a></li>
+            <li><a href="#" class="featured">Catalog</a></li>
             <li><a href="#">Featured</a></li>
             <li><a href="#">Articles</a></li>
             <li><a href="#">About</a></li>
         </ul>         
     </header>
-    
-    <nav class="toolbar-wrapper">
-        <div class="toolbar-search">
-            <i class="fas fa-search"></i>
-            <input type="text" name="searchfonts" placeholder="Search fonts">
-            
-        </div>
-        <div class="toolbar-text">
-           <input type="text" name="typesth" placeholder="Type something...">
-           
-        </div>
-        <div class="toolbar-fontsize">
-            <select name="font_size" id="font_size" class="select-field">
-                <option value="1">8px</option>
-                <option value="2">12px</option>
-                <option value="3">14px</option>
-                <option value="4">20px</option>
-                <option value="5">24px</option>
-                <option value="6">32px</option>
-                <option value="7">40px</option>
-                <option value="8">64px</option>
-                <option value="9">120px</option>
-            </select>
-            
-        </div>
-        <div class="toolbar-switch-wrapper">
-            <label for="checkbox" class="toolbar-switch">
-                <input type="checkbox" id="checkbox">
-                <div class="slider sl-round"></div>
-            </label>
-            
-        </div>
-        <div class="toolbar-view">
-            list
-        </div>
-        <button class="toolbar-refresh">
-            <i class="fas fa-redo-alt"></i>
-        </button>
-    </nav>
-
-    <main>
-       
-        <article class="card roboto">
-            <div class="first-row">
-                <h2 class="name">Roboto</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
+    <div class="main-container">
+        
+        <nav class="toolbar-wrapper">
+            <div class="toolbar-search">
+                <i class="fas fa-search"></i>
+                <form id="search-fonts">
+                    <input type="text" name="searchfonts" placeholder="Search fonts">
+                </form>
+                
                 
             </div>
-            <h3 class="author">Christian Robertson</h3>
-            <div class="text">
-                <p>All their equipment and instruments are alive.</p>
+            <div class="toolbar-text">
+                <form id="type-sth">
+                    <input type="text" name="typesth" placeholder="Type something...">
+                </form>
+            
+            
+            </div>
+            <div class="toolbar-fontsize">
+                <select name="font_size" id="font_size" class="select-field">
+                    <option value="1">8px</option>
+                    <option value="2">12px</option>
+                    <option value="3">14px</option>
+                    <option value="4">20px</option>
+                    <option value="5">24px</option>
+                    <option value="6">32px</option>
+                    <option value="7">40px</option>
+                    <option value="8">64px</option>
+                    <option value="9">120px</option>
+                </select>
+                
+            </div>
+            <div class="toolbar-switch-wrapper">
+                <label for="checkbox" class="toolbar-switch">
+                    <input type="checkbox" id="checkbox">
+                    <div class="slider sl-round"></div>
+                </label>
+                
+            </div>
+            <div class="toolbar-view">
+                <button class="btn-chart">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="btn-list">
+                    <i class="fas fa-list"></i>
+                </button>
+            
+            </div>
+            <div class="toolbar-refresh">
+                <button class="btn-refresh">           
+                    <i class="fas fa-redo-alt"></i>           
+                </button>
             </div>
             
-        </article>
+        </nav>
 
-        <article class="card open-sans">
-            <div class="first-row">
-                <h2 class="name">Open Sans</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Steve Matteson</h3>
-            <p class="text">I watched the storm, so beautiful yet terrific.</p>
-        </article>
-
-        <article class="card lato">
-            <div class="first-row">
-                <h2 class="name">Lato</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Łukasz Dziedzic</h3>
-            <p class="text">Almost before we knew it, we had left the ground.</p>
-        </article>
-
-        <article class="card montserrat">
-            <div class="first-row">
-                <h2 class="name">Montserrat</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Juieta Ulanovsky, sol Matas, Juan pablo dle Peral, Jacques Le Bailly</h3>
-            <p class="text">It was going to be a lonely trip back.</p>
-        </article>
-
-        <article class="card source-sans-pro">
-            <div class="first-row">
-                <h2 class="name">Source Sans Pro</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Paul D.Hunt</h3>
-            <p class="text">My two natures had memory in common.</p>
-        </article>
-
-        <article class="card roboto-condensed">
-            <div class="first-row">
-                <h2 class="name">Roboto Condensed</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Christian Robertson</h3>
-            <p class="text">Silver mist suffused the deck of the ship.</p>
-        </article>
-
-        <article class="card oswald">
-            <div class="first-row">
-                <h2 class="name">Oswald</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Vernon Adams, Kalapi Gajjar, Cyreal</h3>
-            <p class="text">The face of the moon was in shadow.</p>
-        </article>
-
-        <article class="card raleway">
-            <div class="first-row">
-                <h2 class="name">Raleway</h2>
-                <button class="btn-round">
-                    <i class="fas fa-plus-circle"></i>
-                </button>
-            </div>
-            <h3 class="author">Multiple Designers</h3>
-            <p class="text">She stared through the window at the stars.</p>
-        </article>
-
+        <main>
         
-    </main>
+            <article class="card roboto">
+                <div class="first-row">
+                    <h2 class="name">Roboto</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                    
+                </div>
+                <h3 class="author">Christian Robertson</h3>
+                <div class="text">
+                    <p>All their equipment and instruments are alive.</p>
+                </div>
+                
+            </article>
+
+            <article class="card open-sans">
+                <div class="first-row">
+                    <h2 class="name">Open Sans</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Steve Matteson</h3>
+                <p class="text">I watched the storm, so beautiful yet terrific.</p>
+            </article>
+
+            <article class="card lato">
+                <div class="first-row">
+                    <h2 class="name">Lato</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Łukasz Dziedzic</h3>
+                <p class="text">Almost before we knew it, we had left the ground.</p>
+            </article>
+
+            <article class="card montserrat">
+                <div class="first-row">
+                    <h2 class="name">Montserrat</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Juieta Ulanovsky, sol Matas, Juan pablo dle Peral, Jacques Le Bailly</h3>
+                <p class="text">It was going to be a lonely trip back.</p>
+            </article>
+
+            <article class="card source-sans-pro">
+                <div class="first-row">
+                    <h2 class="name">Source Sans Pro</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Paul D.Hunt</h3>
+                <p class="text">My two natures had memory in common.</p>
+            </article>
+
+            <article class="card roboto-condensed">
+                <div class="first-row">
+                    <h2 class="name">Roboto Condensed</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Christian Robertson</h3>
+                <p class="text">Silver mist suffused the deck of the ship.</p>
+            </article>
+
+            <article class="card oswald">
+                <div class="first-row">
+                    <h2 class="name">Oswald</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Vernon Adams, Kalapi Gajjar, Cyreal</h3>
+                <p class="text">The face of the moon was in shadow.</p>
+            </article>
+
+            <article class="card raleway">
+                <div class="first-row">
+                    <h2 class="name">Raleway</h2>
+                    <button class="btn-round">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+                </div>
+                <h3 class="author">Multiple Designers</h3>
+                <p class="text">She stared through the window at the stars.</p>
+            </article>
+
+            
+        </main>
+    </div>
     <footer>
         <p>Created by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a>  |  Chingu Solo Project</p>
     </footer>
