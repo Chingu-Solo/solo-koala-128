@@ -319,9 +319,7 @@ main {
     grid-row: 3 / 4;
     display: grid;
     grid-template-rows: minmax(237px, auto);
-    grid-gap: 2.5rem;
-    margin-top: 1.5rem;
-    
+    grid-gap: 2.5rem;    
 }
 .card {    
     padding-top: 1rem;
@@ -404,7 +402,7 @@ footer a {
 @media screen and (max-width: 649px) {
     .main-container, .navigation, .logo {
         padding: 0 1.25rem; 
-        max-width: 100%;
+        max-width: 95%;
     }
     header {
         flex-direction: column;
