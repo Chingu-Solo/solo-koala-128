@@ -50,7 +50,10 @@ h3 {
 .main-container {
     padding: 0 3rem;
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows:  64px 1fr;
+    padding-bottom: 3rem;
+    align-items: start;
+    grid-row: 2 / 3;
     
 }
 
@@ -63,8 +66,7 @@ header {
     padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
     align-items: center;
-   
-    
+    margin-bottom: .75rem;
 }
 header ul {
     display: flex;
@@ -107,15 +109,15 @@ header a {
 
 nav {
     display: flex;
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     justify-content: space-between;
     border: 1px solid var(--border-color);
     margin-bottom: 2.5rem;
     border-radius: 34px;
-    padding: 1rem .5rem;
+    padding: .5rem;
     width: 100%;
     align-items: center;
-    margin-top: 1rem;
+    
 }
 
 .toolbar-wrapper {
@@ -317,7 +319,7 @@ button.btn-list {
 /*------------------ MAIN CONTENT ---------------------*/
 
 main {
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     display: grid;
     grid-template-rows: minmax(237px, auto);
     grid-gap: 2.5rem;    
@@ -350,7 +352,7 @@ main {
 
 .text {
     padding-top: 1.5rem;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .roboto p {
@@ -385,7 +387,7 @@ footer {
     text-align: center;
     padding: 1rem 5%;
     margin-bottom: 0;
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
     margin-top: 1rem;    
 }
 
