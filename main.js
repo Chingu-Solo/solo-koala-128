@@ -1,5 +1,5 @@
 // scroll top button 
-mybutton = document.getElementById("my-btn");
+const mybutton = document.getElementById("my-btn");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -45,19 +45,15 @@ typeBar.addEventListener('keyup', function(e) {
     })
 })
 
-// refresh page using button
+// refresh button 
 
-// const refreshBar = document.getElementById('refresh');
-// console.log(refresh)
-
-// function refreshPage(event, typeBar, searchBar) {
-
-
-// }
-// refreshBar.addEventListener('click',  {
-
-// })
-
+const refreshButton = document.getElementById("refresh");
+console.log(refreshButton)
+refreshButton.addEventListener('click', function() {
+    document.getElementById("type-sth").reset();
+    document.getElementById("search-fonts").reset();
+    window.location.reload();   
+})
 
 // the light/dark mode toggle buttons
 
