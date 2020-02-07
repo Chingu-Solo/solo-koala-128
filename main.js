@@ -24,7 +24,6 @@ searchBar.addEventListener('keyup', function(e) {
     const term = e.target.value.toLowerCase()    
     Array.from(names).forEach(function(name) {
         const fontName = name.querySelector('h2').textContent;
-        
         if (fontName.toLowerCase().indexOf(term) != -1) {
             name.style.display = 'block';
         } else {
@@ -34,14 +33,15 @@ searchBar.addEventListener('keyup', function(e) {
 })
 
 const typeBar = document.forms['type-sth'].querySelector('input');
-console.log(typeBar)
 typeBar.addEventListener('keyup', function(e) {
     const word = e.target.value;
-    console.log(word)
     Array.from(names).forEach(function(name){
-        let paragraph = name.querySelector('p')
-        console.log(`This is: ${paragraph}.`)        
-        paragraph.textContent = word;
+        if (word === ""){
+            window.location.reload();
+        } else {
+            let paragraph = name.querySelector('p')    
+            paragraph.textContent = word;
+        } 
     })
 })
 
@@ -52,7 +52,8 @@ console.log(refreshButton)
 refreshButton.addEventListener('click', function() {
     document.getElementById("type-sth").reset();
     document.getElementById("search-fonts").reset();
-    window.location.reload();   
+    window.location.reload(false); 
+    
 })
 
 // the light/dark mode toggle buttons
