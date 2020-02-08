@@ -37,7 +37,7 @@ typeBar.addEventListener('keyup', function(e) {
     const word = e.target.value;
     Array.from(names).forEach(function(name){
         if (word === ""){
-            window.location.reload();
+            window.location.reload(false);
         } else {
             let paragraph = name.querySelector('p')    
             paragraph.textContent = word;
@@ -45,14 +45,30 @@ typeBar.addEventListener('keyup', function(e) {
     })
 })
 
+// select font button functionality 
+
+const select = document.getElementById('font_size');
+console.log(select)
+select.addEventListener('click', function() {
+    const fontSize = select.options[select.selectedIndex].value;
+    console.log(fontSize)
+    Array.from(names).forEach(function(name) {
+        let paragraph = name.querySelector('p');        
+        paragraph.style.fontSize = fontSize;
+        
+    })
+})
+
 // refresh button 
 
 const refreshButton = document.getElementById("refresh");
-console.log(refreshButton)
+
 refreshButton.addEventListener('click', function() {
     document.getElementById("type-sth").reset();
-    document.getElementById("search-fonts").reset();
-    window.location.reload(false); 
+    document.getElementById("search-fonts").reset(); 
+    select.options[3].selected="true";        
+    location.reload();    
+    
     
 })
 

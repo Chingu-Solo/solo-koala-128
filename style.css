@@ -28,6 +28,7 @@ html {
     --input-bgcolor: #FFFAFA;
     --input-color: rgb(0, 0, 0);
     --card-border-color: rgba(0, 0, 0, .65);
+    
 }
 
 [data-theme="dark"] {
@@ -188,6 +189,10 @@ select {
     -moz-appearance: none;
 }
 
+select:focus {
+    color: rgb(0, 0, 0);
+}
+
 select.select-field {
     background-image:
     linear-gradient(45deg, transparent 50%, #ff5252 50%),
@@ -328,6 +333,7 @@ main {
     padding-top: 1rem;
     padding-bottom: 5rem;
     border-top: 1px solid var(--card-border-color);
+    
 }
 .first-row {
     display: flex;
@@ -353,6 +359,19 @@ main {
 .text {
     padding-top: 1.5rem;
     font-size: 24px;
+    overflow-wrap: break-word;
+}
+
+.sriracha  p{
+    font-family: 'Sriracha', cursive;
+}
+
+.zhi-mang p {
+    font-family: 'Zhi Mang Xing', cursive;
+}
+
+.lemonada p {
+    font-family: 'Lemonada', cursive;
 }
 
 .roboto p {
@@ -456,7 +475,9 @@ footer a {
     header ul li {
         padding-left: 1.5rem;
     }
-   
+    .card {
+        max-width: 360px;
+    }
     
 }
 @media (min-width: 1260px) {
@@ -467,6 +488,9 @@ footer a {
         padding-left: 5rem;
         padding-right: 5rem;
     } 
+    .card {
+        max-width: 360px;
+    }
     
 }
 @media (min-width: 1600px) {
