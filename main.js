@@ -4,7 +4,7 @@ const mybutton = document.getElementById("my-btn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
@@ -48,42 +48,68 @@ typeBar.addEventListener('keyup', function(e) {
 // select font button functionality 
 
 const select = document.getElementById('font_size');
-console.log(select)
+
 select.addEventListener('click', function() {
     const fontSize = select.options[select.selectedIndex].value;
-    console.log(fontSize)
     Array.from(names).forEach(function(name) {
         let paragraph = name.querySelector('p');        
         paragraph.style.fontSize = fontSize;
-        
     })
+})
+
+// list / chart button functionality 
+
+
+const btnList = document.getElementById('list-view');
+const btnChart = document.getElementById('chart-view');
+
+btnList.addEventListener('click', function () {
+    btnList.style.display = 'none';
+    btnChart.style.display = 'block';
+    document.getElementById('main-content').style.gridTemplateColumns = '1fr';
+})
+
+function chartView () {
+    btnList.style.display = 'block';
+    btnChart.style.display = 'none';
+    document.getElementById('main-content').style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, auto))';
+}
+btnChart.addEventListener('click', chartView)
+
+
+// the light/dark mode toggle buttons
+
+ 
+const radioWhite = document.getElementById('radio-white');
+const radioBlack = document.getElementById('radio-black');
+
+radioWhite.addEventListener('change', function() {
+    document.documentElement.setAttribute('data-theme', 'white') 
+})
+
+radioBlack.addEventListener('change', function () {
+    document.documentElement.setAttribute('data-theme', 'dark');
 })
 
 // refresh button 
 
 const refreshButton = document.getElementById("refresh");
+const fontSize = select.options[select.selectedIndex].value;
+
 
 refreshButton.addEventListener('click', function() {
+    chartView();
     document.getElementById("type-sth").reset();
     document.getElementById("search-fonts").reset(); 
-    select.options[3].selected="true";        
-    location.reload();    
-    
-    
+    select.options[3].selected="true";   
+    btnList.style.display = 'block';
+    btnChart.style.display = 'none';       
+    document.documentElement.setAttribute('data-theme', 'white');
+      
+    Array.from(names).forEach(function(name) {
+        let paragraph = name.querySelector('p');        
+        paragraph.style.fontSize = '24px';
+    })
 })
-
-// the light/dark mode toggle buttons
-
-const toggleSwitch = document.querySelector('.toolbar-switch input[type="checkbox"]')
-
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'white');
-    }
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
+    
 

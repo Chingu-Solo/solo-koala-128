@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/658ee16d86.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- ----------------- HEADER -------------------- -->
     <header>
         <a href="#" class="logo">Google <span>Fonts</span></a>
         <ul class="navigation">
@@ -21,7 +22,11 @@
             <li><a href="#">About</a></li>
         </ul>         
     </header>
+    <!-- ----------------- END OF HEADER -------------------- -->
+
     <div class="main-container">
+
+     <!-- ----------------- NAVIGATION  -------------------- -->
         
         <nav class="toolbar-wrapper">
             <div class="toolbar-search">
@@ -52,19 +57,32 @@
                 </select>
                 
             </div>
-            <div class="toolbar-switch-wrapper">
-                <label for="checkbox" class="toolbar-switch">
-                    <input type="checkbox" id="checkbox">
-                    <div class="slider sl-round"></div>
-                </label>
+            <div class="toolbar-switch">
+                <ul>
+                    <li class="white">
+                        <label for="t-option">
+                            <input type="radio" id="radio-white"  name="radio" checked="checked">
+                        </label>
+                    </li>
+                    <li class="black">
+                        <label for="t-option">                
+                            <input type="radio" id="radio-black" name="radio">
+                            
+                        </label>
+                    </li>
+                   
+                   
+
+                </ul>
+                
                 
             </div>
             <div class="toolbar-view">
-                <button class="btn-chart">
+                <button class="btn-chart" id="chart-view" >
                     <i class="fas fa-th"></i>
                 </button>
-                <button class="btn-list">
-                    <i class="fas fa-list"></i>
+                <button class="btn-list" id="list-view" >
+                    <i class="fas fa-list" ></i>
                 </button>
             
             </div>
@@ -76,7 +94,11 @@
             
         </nav>
 
-        <main>
+         <!-- ----------------- END OF NAVIGATION -------------------- -->
+
+          <!-- -------------- BODY WITH ARTICLES ------------------- -->
+
+        <main id="main-content">
         
             <article class="card roboto">
                 <div class="first-row">
@@ -203,16 +225,19 @@
                 <h3 class="author">Multiple Designers</h3>
                 <p class="text">She stared through the window at the stars.</p>
             </article>
-
             
         </main>
+         <!-- ----------------- END OF BODY  -------------------- -->
     </div>
+
+     <!-- ----------------- FOOTER -------------------- -->
     <footer>
         <p>Created by <a href="https://github.com/maknetaRo">Magdalena Rosłaniec</a>  |  Chingu Solo Project</p>
         <button class="btn-arrow-up" onclick="topButton()" id="my-btn">
             <i class="fas fa-arrow-up"></i>
         </button>
     </footer>
+     <!-- ----------------- END OF FOOTER -------------------- -->
     <script src="main.js"></script>
 </body>
 </html>

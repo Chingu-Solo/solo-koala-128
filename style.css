@@ -12,6 +12,7 @@ body {
     margin: 0 auto;
     color: var(--font-color);
     background-color: var(--bg-color);
+    /* justify-content: center; */
 
 }
 html {
@@ -48,15 +49,7 @@ h2, h3 {
 h3 {
     color: var(--secondary-font-color);
 }
-.main-container {
-    padding: 0 3rem;
-    display: grid;
-    grid-template-rows:  64px 1fr;
-    padding-bottom: 3rem;
-    align-items: start;
-    grid-row: 2 / 3;
-    
-}
+
 
 /*------------------ HEADER ---------------------*/
 
@@ -64,10 +57,11 @@ header {
     display: flex;
     justify-content: space-between;
     grid-row: 1 / 2;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     border-bottom: 1px solid var(--border-color);
     align-items: center;
     margin-bottom: .75rem;
+    
 }
 header ul {
     display: flex;
@@ -107,6 +101,15 @@ header a {
 }
 
 /*------------------ NAVBAR ---------------------*/
+.main-container {
+    padding: 0 5%;
+    display: grid;
+    grid-template-rows:  64px 1fr;
+    padding-bottom: 3rem;
+    align-items: start;
+    grid-row: 2 / 3;    
+    
+}
 
 nav {
     display: flex;
@@ -115,10 +118,8 @@ nav {
     border: 1px solid var(--border-color);
     margin-bottom: 2.5rem;
     border-radius: 34px;
-    padding: .5rem;
-    width: 100%;
+    padding: 1rem;
     align-items: center;
-    
 }
 
 .toolbar-wrapper {
@@ -229,74 +230,39 @@ select.select-field:focus {
   
 /*------------------ COLOR SWITCHER ---------------------*/
 
-
-.toolbar-switch-wrapper {
+.toolbar-switch ul{
     display: flex;
-    align-content: center;
-    padding-top: 2rem;
-    
-    
-}
-
-.toolbar-switch {
-    display: inline-block;
-    height: 46px;
-    position:relative;
+    flex-direction: row;
+    justify-content: space-between;
     width: 60px;
+}
+.toolbar-switch ul li {
+    list-style: none;
+    padding-left: .5rem;
+    display: block;
+    border: 1px solid #ff5252;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
     
 }
 
-.toolbar-switch input {
-    display: none;
-}
-
-.slider {
-    background-color: rgb(0, 0, 0);
-    bottom: 1.5rem;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: -7px;
-    transition: .4s;
-}
-.slider:before {
+.white {
     background-color: #FFFAFA;
-    bottom: 3px;
-    content: "";
-    height: 24px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 24px;
+    padding-right: .5rem;
 }
-
-input:checked + .slider {
-    background-color: rgb(211, 211, 211);
-}
-
-input:checked + .slider:before {
-    transform: translateX(24px);
-}
-
-.slider.sl-round {
-    border-radius: 24px;
-}
-
-.slider.sl-round  {
-    border-radius: 24px;
-}
-
-.slider.sl-round:before {
-    border-radius: 50%;
+.black {
+    background-color: rgb(0, 0, 0);
 }
 
 /*-------------- LIST / CHART SWITCHER & REFRESH BUTTONs----------------*/
+
 .toolbar-view {
     display: flex;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     border-left: 1px solid var(--border-color);
     width: 5%;
+    justify-content: center;
 }
 .toolbar-refresh {
     padding-left: .5rem;
@@ -309,14 +275,13 @@ button.btn-chart, button.btn-list, button.btn-refresh {
     outline: none;
     font-size: 20px;
     cursor: pointer; 
-    color: var(--font-color);
-    
+    color: var(--font-color);    
 }
 button.btn-refresh {
     font-size: 16px;
 }
 
-button.btn-list {
+button.btn-chart {
     display: none;
 }
 
@@ -327,7 +292,10 @@ main {
     grid-row: 2 / 3;
     display: grid;
     grid-template-rows: minmax(237px, auto);
-    grid-gap: 2.5rem;    
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 2.5rem; 
+    /* max-width: 1440px; */
+      
 }
 .card {    
     padding-top: 1rem;
@@ -442,7 +410,7 @@ footer a {
     z-index: 99;
     
 }
-/*------------------ MEDIA  ---------------------*/
+/* ------------------ MEDIA  --------------------- */
 
 @media screen and (max-width: 649px) {
     .main-container, .navigation, .logo {
@@ -467,41 +435,4 @@ footer a {
         display: none;
     }
     
-}
-@media (min-width: 640px) {
-    main {
-        grid-template-columns: repeat(2, 1fr);  
-    }
-    header ul li {
-        padding-left: 1.5rem;
-    }
-    .card {
-        max-width: 360px;
-    }
-    
-}
-@media (min-width: 1260px) {
-    main {
-        grid-template-columns: repeat( 3, 1fr);
-    }
-    .main-container, .navigation, .logo {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    } 
-    .card {
-        max-width: 360px;
-    }
-    
-}
-@media (min-width: 1600px) {
-    main {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    nav, main {
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    .card {
-        max-width: 360px;
-    }
 }
