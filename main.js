@@ -105,6 +105,7 @@ refreshButton.addEventListener('click', function() {
     btnList.style.display = 'block';
     btnChart.style.display = 'none';       
     document.documentElement.setAttribute('data-theme', 'white');
+    document.getElementById("radio-white").checked = true;
       
     Array.from(names).forEach(function(name) {
         let paragraph = name.querySelector('p');        
