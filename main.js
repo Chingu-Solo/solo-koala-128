@@ -1,5 +1,21 @@
+const texts = [
+    'All their equipment and instruments are alive.',
+    'My two natures had memory in common.',
+    'All their equipment and instruments are alive.',
+    'The recorded voice scratched in the speaker.',
+    'I watched the storm, so beautiful yet terrific.',
+    'Almost before we knew it, we had left the ground.',
+    'It was going to be a lonely trip back.',
+    'My two natures had memory in common.',
+    'Silver mist suffused the deck of the ship.',
+    'The face of the moon was in shadow.',
+    'She stared through the window at the stars.'
+
+]
+
 // scroll top button 
 const mybutton = document.getElementById("my-btn");
+
 
 window.onscroll = function() {scrollFunction()};
 
@@ -16,7 +32,7 @@ function topButton() {
     document.documentElement.scrollTop = 0;
 }
 
-// search fonts && type something
+// search fonts 
 const names = document.querySelectorAll('article')
 
 const searchBar = document.forms['search-fonts'].querySelector('input');
@@ -32,12 +48,21 @@ searchBar.addEventListener('keyup', function(e) {
     })
 })
 
+//  type something
+function restartText () {
+            for (let i = 0; i < names.length; i++){
+            let paragraph = names[i].querySelector('p');
+            paragraph.textContent = texts[i]
+        }
+    }        
+
+
 const typeBar = document.forms['type-sth'].querySelector('input');
 typeBar.addEventListener('keyup', function(e) {
     const word = e.target.value;
     Array.from(names).forEach(function(name){
         if (word === ""){
-            window.location.reload(false);
+            restartText();
         } else {
             let paragraph = name.querySelector('p')    
             paragraph.textContent = word;
@@ -56,6 +81,14 @@ select.addEventListener('click', function() {
         paragraph.style.fontSize = fontSize;
     })
 })
+
+function restartFonts () {
+    Array.from(names).forEach(function(name) {
+        let paragraph = name.querySelector('p');     
+        paragraph.style.fontSize = '24px';
+        name.style.display = 'block';
+        })
+}
 
 // list / chart button functionality 
 
@@ -106,11 +139,8 @@ refreshButton.addEventListener('click', function() {
     btnChart.style.display = 'none';       
     document.documentElement.setAttribute('data-theme', 'white');
     document.getElementById("radio-white").checked = true;
-      
-    Array.from(names).forEach(function(name) {
-        let paragraph = name.querySelector('p');        
-        paragraph.style.fontSize = '24px';
-    })
+    restartFonts()
+    restartText()
 })
     
 
