@@ -10,12 +10,20 @@ const texts = [
     'Silver mist suffused the deck of the ship.',
     'The face of the moon was in shadow.',
     'She stared through the window at the stars.'
-
 ]
+const mybutton = document.getElementById("my-btn");
+const names = document.querySelectorAll('article');
+const searchBar = document.forms['search-fonts'].querySelector('input');
+const typeBar = document.forms['type-sth'].querySelector('input');
+const select = document.getElementById('font_size');
+const btnList = document.getElementById('list-view');
+const btnChart = document.getElementById('chart-view');
+const radioWhite = document.getElementById('radio-white');
+const radioBlack = document.getElementById('radio-black');
+const refreshButton = document.getElementById("refresh");
+const fontSize = select.options[select.selectedIndex].value;
 
 // scroll top button 
-const mybutton = document.getElementById("my-btn");
-
 
 window.onscroll = function() {scrollFunction()};
 
@@ -31,11 +39,8 @@ function topButton() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
 // search fonts 
-const names = document.querySelectorAll('article')
 
-const searchBar = document.forms['search-fonts'].querySelector('input');
 searchBar.addEventListener('keyup', function(e) {
     const term = e.target.value.toLowerCase()    
     Array.from(names).forEach(function(name) {
@@ -56,8 +61,6 @@ function restartText () {
         }
     }        
 
-
-const typeBar = document.forms['type-sth'].querySelector('input');
 typeBar.addEventListener('keyup', function(e) {
     const word = e.target.value;
     Array.from(names).forEach(function(name){
@@ -71,8 +74,6 @@ typeBar.addEventListener('keyup', function(e) {
 })
 
 // select font button functionality 
-
-const select = document.getElementById('font_size');
 
 select.addEventListener('click', function() {
     const fontSize = select.options[select.selectedIndex].value;
@@ -90,11 +91,7 @@ function restartFonts () {
         })
 }
 
-// list / chart button functionality 
-
-
-const btnList = document.getElementById('list-view');
-const btnChart = document.getElementById('chart-view');
+// list / chart view button functionality 
 
 btnList.addEventListener('click', function () {
     btnList.style.display = 'none';
@@ -102,19 +99,13 @@ btnList.addEventListener('click', function () {
     document.getElementById('main-content').style.gridTemplateColumns = '1fr';
 })
 
-function chartView () {
+btnChart.addEventListener('click', function () {
     btnList.style.display = 'block';
     btnChart.style.display = 'none';
     document.getElementById('main-content').style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, auto))';
-}
-btnChart.addEventListener('click', chartView)
-
+})
 
 // the light/dark mode toggle buttons
-
- 
-const radioWhite = document.getElementById('radio-white');
-const radioBlack = document.getElementById('radio-black');
 
 radioWhite.addEventListener('change', function() {
     document.documentElement.setAttribute('data-theme', 'white') 
@@ -125,10 +116,6 @@ radioBlack.addEventListener('change', function () {
 })
 
 // refresh button 
-
-const refreshButton = document.getElementById("refresh");
-const fontSize = select.options[select.selectedIndex].value;
-
 
 refreshButton.addEventListener('click', function() {
     chartView();
