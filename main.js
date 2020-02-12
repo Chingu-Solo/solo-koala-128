@@ -23,6 +23,8 @@ const radioBlack = document.getElementById('radio-black');
 const refreshButton = document.getElementById("refresh");
 const fontSize = select.options[select.selectedIndex].value;
 
+
+
 // scroll top button 
 
 window.onscroll = function() {scrollFunction()};
@@ -99,11 +101,13 @@ btnList.addEventListener('click', function () {
     document.getElementById('main-content').style.gridTemplateColumns = '1fr';
 })
 
-btnChart.addEventListener('click', function () {
+function chartView () {
     btnList.style.display = 'block';
     btnChart.style.display = 'none';
     document.getElementById('main-content').style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, auto))';
-})
+}
+btnChart.addEventListener('click', chartView)
+
 
 // the light/dark mode toggle buttons
 
