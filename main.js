@@ -90,6 +90,7 @@ function restartFonts () {
         let paragraph = name.querySelector('p');     
         paragraph.style.fontSize = '24px';
         name.style.display = 'block';
+        select.options[3].selected="true"; 
         })
 }
 
@@ -125,7 +126,6 @@ refreshButton.addEventListener('click', function() {
     chartView();
     document.getElementById("type-sth").reset();
     document.getElementById("search-fonts").reset(); 
-    select.options[3].selected="true";   
     btnList.style.display = 'block';
     btnChart.style.display = 'none';       
     document.documentElement.setAttribute('data-theme', 'white');
