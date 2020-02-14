@@ -8,12 +8,13 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPlusCircle, faSearch, faList, faTh, faRedoAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPlusCircle, faSearch, faList, faTh, faRedoAlt, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ConfigService } from './config.service';
 import { CardComponent } from './card/card.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     FooterComponent,
     NavigationComponent,
-    CardComponent
+    CardComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,6 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppModule {
   constructor(library: FaIconLibrary) {
 
-    library.addIcons(faPlusCircle, faSearch, faList, faTh, faRedoAlt);
+    library.addIcons(faPlusCircle, faSearch, faList, faTh, faRedoAlt, faArrowUp);
   }
  }

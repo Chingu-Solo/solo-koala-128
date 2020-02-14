@@ -375,14 +375,20 @@ footer a {
     
 }
 
-#my-btn {
-    display: none;
+.scroll-to-top {
     position: fixed;
     bottom: 2.3rem;
     right: 1.8rem;
+    opacity: 0;
+    transition: all .2s ease-in-out;
     z-index: 99;
-    
 }
+.show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+
+
 /* ------------------ MEDIA  --------------------- */
 
 @media screen and (max-width: 651px) {
