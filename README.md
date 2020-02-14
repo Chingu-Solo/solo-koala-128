@@ -1,7 +1,7 @@
 # solo-koala-128 - tier1
 See-your-Chingu-homepage-for-what-project-to-build -> https://chingu.io/ | Solo Koala | Twitter: https://twitter.com/ChinguCollabs
 
-# Live: [Favorite Fonts Website](https://chingu-solo.github.io/solo-koala-128/index.html) 
+# Live: [Favorite Fonts Website](https://chingu-solo.github.io/solo-koala-128/static-website/index.html) 
 
 ## Chingu Solo Project - Tier 1 - Favorite Fonts
 
