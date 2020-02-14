@@ -1,0 +1,60 @@
+<nav class="toolbar-wrapper">
+    <div class="toolbar-search">
+        <fa-icon [icon]="['fas', 'search']" size="2x" [styles]="{'padding': '.6rem 0 .4rem'}"></fa-icon>
+        <form id="search-fonts">
+            <input type="text" name="searchfonts" placeholder="Search fonts">
+        </form>
+        
+        
+    </div>
+    <div class="toolbar-text">
+        <form id="type-sth">
+            <input type="text" name="typesth" placeholder="Type something...">
+        </form>
+    
+    
+    </div>
+    <div class="toolbar-fontsize">
+        <select name="font_size" id="font_size" class="select-field">
+            <option value="11px">11px</option>
+            <option value="14px">14px</option>
+            <option value="18px">18px</option>
+            <option value="24px" selected>24px</option>
+            <option value="32px">32px</option>
+            <option value="40px">40px</option>
+            <option value="64px">64px</option>
+            <option value="120px">120px</option>
+        </select>
+        
+    </div>
+    <div class="toolbar-switch">
+        <div class="switch-wrapper">
+            <label>
+                <input type="radio" id="radio-white"  name="switcher" checked="checked">
+                <span class="white"> </span>
+            </label>
+            <label>
+                <input type="radio" id="radio-black"  name="switcher">
+                <span class="black"> </span>
+            </label>  
+        </div>
+              
+    </div>
+
+    <div class="toolbar-view">
+        <button class="btn-chart" id="chart-view" >
+            <fa-icon [icon]="['fas', 'th']" size="2x" [styles]="{'padding': '0 .4rem'}"></fa-icon>
+        </button>
+        <button class="btn-list" id="list-view" >
+            <fa-icon [icon]="['fas', 'list']" size="2x" [styles]="{'padding': '0 .4rem'}"></fa-icon>
+            <i class="fas fa-list" ></i>
+        </button>
+    
+    </div>
+    <div class="toolbar-refresh">
+        <button type="submit"  class="btn-refresh" id="refresh">           
+            <fa-icon [icon]="['fas', 'redo-alt']" size="1x" ></fa-icon>      
+        </button>
+    </div>
+    
+</nav>
