@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPlusCircle, faSearch, faList, faTh, faRedoAlt } from '@fortawesome/free-solid-svg-icons';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ConfigService } from './config.service';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,15 @@ import { faPlusCircle, faSearch, faList, faTh, faRedoAlt } from '@fortawesome/fr
     HeaderComponent,
     ToolbarComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    NavigationComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  header = {};
+
+  constructor(private config: ConfigService) { }
 
   ngOnInit() {
+    this.header = this.getHeader();
   }
 
+
+  getHeader() {
+    return this.config.getConfig().header;
+  }
+  
 }
