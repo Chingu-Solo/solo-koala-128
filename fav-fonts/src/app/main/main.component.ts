@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
+import { HttpService } from '../http.service';
 
 
 @Component({
@@ -11,10 +12,16 @@ export class MainComponent implements OnInit {
 
   main = {}
 
-  constructor(private config: ConfigService) { }
+  fonts: Object;
+
+  constructor(private config: ConfigService, private _http: HttpService) { }
 
   ngOnInit() {
     this.main = this.getMain();
+    this._http.getFonts().subscribe(data => {
+      this.fonts = data;
+      console.log(this.fonts);
+    });
   }
   
   getMain() {

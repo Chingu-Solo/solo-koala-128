@@ -13,6 +13,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ConfigService } from './config.service';
 import { CardComponent } from './card/card.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { CardComponent } from './card/card.component';
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
+    
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

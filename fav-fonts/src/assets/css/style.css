@@ -338,42 +338,7 @@ main {
     overflow-wrap: break-word;
 }
 
-.sriracha  p{
-    font-family: 'Sriracha', cursive;
-}
 
-.zhi-mang p {
-    font-family: 'Zhi Mang Xing', cursive;
-}
-
-.lemonada p {
-    font-family: 'Lemonada', cursive;
-}
-
-.roboto p {
-    font-family: 'Roboto', sans-serif;
-}
-.open-sans p {
-    font-family: 'Open Sans', sans-serif;
-}
-.lato p {
-    font-family: 'Lato', sans-serif;
-}
-.montserrat p {
-    font-family: 'Montserrat', sans-serif;
-}
-.source-sans-pro p {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.roboto-condensed p {
-    font-family: 'Roboto Condensed', sans-serif;
-}
-.oswald p {
-    font-family: 'Oswald', sans-serif;
-}
-.raleway p {
-    font-family: 'Raleway', sans-serif;
-}
 
 /*------------------ FOOTER ---------------------*/
 footer {
