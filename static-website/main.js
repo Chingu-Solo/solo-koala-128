@@ -77,7 +77,7 @@ typeBar.addEventListener('keyup', function(e) {
 
 // select font button functionality 
 
-select.addEventListener('click', function() {
+select.addEventListener('change', function() {
     const fontSize = select.options[select.selectedIndex].value;
     Array.from(names).forEach(function(name) {
         let paragraph = name.querySelector('p');        
