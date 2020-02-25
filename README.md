@@ -9,6 +9,8 @@
 [@maknetaRo - Magdalena Rosłaniec ](https://github.com/maknetaRo)
 
 ### Overview
+
+This app was created in HTML, CSS and vanilla JavaScript. It's a clone of Google Fonts. The website was created for the Chingu solo project. 
 ------------------------------------------------------------------------------------
 
 #### Requirements
